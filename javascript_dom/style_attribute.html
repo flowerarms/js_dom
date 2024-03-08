@@ -13,14 +13,9 @@
         elem.style.fontWeight = 'bold';
         elem.style.fontSize = '50px';
     }*/
-
-
-
-
-
     var headers = document.getElementsByTagName("h1");
     for(var i=0;i<headers.length;i++){
-    var next = getNextElement(headers[i].nextSibling);
+    var next = getNextElement(headers[i].nextSibling);//寻找数组就用[]，firstchild是用来获取节点的，我们可以获取数组下的第一个节点。
     alert(next.firstChild.nodeValue);
    }
   }
