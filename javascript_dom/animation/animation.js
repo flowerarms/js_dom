@@ -5,7 +5,7 @@ function positionMessage(){
     elem.style.top = '100px';
     moveElement('message',500,20,10);
 }
-function moveElement(elementID,final_x,final_y,interval){
+function moveElement(elementID,final_x,final_y,interval){//移动元素函数
     var elem = document.getElementById(elementID);
     var xpos = parseInt(elem.style.left);
     var ypos = parseInt(elem.style.top);
@@ -26,10 +26,10 @@ function moveElement(elementID,final_x,final_y,interval){
     }
     elem.style.left = xpos + "px";
     elem.style.top = ypos + "px";
-    var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+    var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";//为什么elementID左右有双引号
     movement = setTimeout(repeat, interval);
 }
-function addLoadEvent(func){
+function addLoadEvent(func){//共享onload函数
     var oldonload = window.onload;
     if(typeof window.onload != 'function'){
         window.onload = func;
